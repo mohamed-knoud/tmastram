@@ -2,6 +2,8 @@ import React,{useEffect,useState,useRef} from 'react'
 import axios from 'axios';
 import Tooltip from './Tooltip';
 import './Home.css'
+import {Link } from 'react-router-dom';
+
 function Home() {
     const [actual,setActual] = useState(null)
     const [actual2,setActual2] = useState(null)
