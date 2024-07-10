@@ -363,11 +363,11 @@ const handleRight4=()=>{
                 {actual && <span style={{fontSize:'2em',fontWeight:'900'}}>{actual.original_title.length>21?actual.original_title.substring(0,15)+"...":actual.original_title}</span>}
                 <div style={{position:'relative',marginTop:'10px'}}>
                 <span style={{display:'inline-block',transform: 'rotate(-90deg)'}}>Movie</span>
-                <Tooltip text="Watch Online">
-                <span style={{backgroundColor:'#ffd700',color:'white',padding:'10px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Watch <i style={{color:'white'}} className="fa-solid fa-play"></i></span>
+                 <Tooltip text="Watch Online">
+                <span style={{backgroundColor:'#ffd700',color:'#000',padding:'10px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Watch <i style={{color:'#000'}} className="fa-solid fa-play"></i></span>
                 </Tooltip>
                 <Tooltip text="Know more">
-                <span style={{backgroundColor:'#ffd700',color:'white',padding:'10px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Detail</span>
+                <Link style={{textDecoration:'none'}} to={`detail/`}><span style={{backgroundColor:'#ffd700',color:'#000',padding:'10px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Detail</span></Link>
                 </Tooltip>
                 <Tooltip text="Add to Watchlist">
                 <i style={{fontSize:'1.2em',margin:'0 10px',cursor:'pointer'}} className="fa-solid fa-plus"></i>
