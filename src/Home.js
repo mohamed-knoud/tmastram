@@ -362,21 +362,21 @@ const handleRight4=()=>{
             {actual && <img id="poster" src={`https://image.tmdb.org/t/p/original${actual.backdrop_path}`} alt=""/>}<div>
                 
                 <div style={{position:'relative',bottom:'50px',border:'10px solid #1b191a',zIndex:'999',borderRadius:'60px',backgroundColor:'#000',color:'#a4b2c8',textAlign:'center',height:'auto',paddingBottom:'15px',width:'70%'}}>
-                {actual && <span style={{fontSize:'1.8em',fontWeight:'900'}}>{actual.original_title.length>21?actual.original_title.substring(0,15)+"...":actual.original_title}</span>}
+                {actual && <span style={{fontSize:'2.1em',fontWeight:'900'}}>{actual.original_title.length>21?actual.original_title.substring(0,15)+"...":actual.original_title}</span>}
                 <div style={{position:'relative',marginTop:'10px'}}>
                 <span style={{display:'inline-block',transform: 'rotate(-90deg)'}}>Movie</span>
                  <Tooltip text="Watch Online">
-                <span style={{fontSize:'0.8em',backgroundColor:'#ffd700',color:'#000',padding:'5px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Watch <i style={{fontSize:'0.8em',color:'#000'}} className="fa-solid fa-play"></i></span>
+                <span style={{fontSize:'0.6em',backgroundColor:'#ffd700',color:'#000',padding:'5px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Watch <i style={{fontSize:'0.8em',color:'#000'}} className="fa-solid fa-play"></i></span>
                 </Tooltip>
                 <Tooltip text="Know more">
-                <Link style={{textDecoration:'none'}} to={`detail/`}><span style={{fontSize:'0.8em',backgroundColor:'#ffd700',color:'#000',padding:'5px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Detail</span></Link>
+                <Link style={{textDecoration:'none'}} to={`detail/`}><span style={{fontSize:'0.6em',backgroundColor:'#ffd700',color:'#000',padding:'5px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Detail</span></Link>
                 </Tooltip>
                 <Tooltip text="Add to Watchlist">
-                <i style={{fontSize:'0.8em',,margin:'0 10px',cursor:'pointer'}} className="fa-solid fa-plus"></i>
+                <i style={{fontSize:'0.6em',,margin:'0 10px',cursor:'pointer'}} className="fa-solid fa-plus"></i>
 
                 </Tooltip>
                 <Tooltip text="Share">
-                <i style={{fontSize:'0.8em',,margin:'0 10px',cursor:'pointer'}} className="fa-solid fa-share"></i>
+                <i style={{fontSize:'0.6em',,margin:'0 10px',cursor:'pointer'}} className="fa-solid fa-share"></i>
 
                 </Tooltip>
                 
