@@ -295,7 +295,7 @@ function Home() {
   {actual3 !== null && actual3.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
       <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
-      <span style={{marginTop:'10px',color:'#777'}}>movie.original_title.length>14?movie.original_title.substring(0,11)+"...":movie.original_title}</span>
+      <span style={{marginTop:'10px',color:'#777'}}>{movie.original_title.length>14?movie.original_title.substring(0,11)+"...":movie.original_title}</span>
     </div>
   ))}
 </div>
