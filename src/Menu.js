@@ -2,6 +2,8 @@ import React from 'react'
 import './Menu.css'
 import Tooltip from './Tooltip';
 import { useState } from 'react';
+import {Link } from 'react-router-dom';
+
 function Menu() {
     const [clicked1, setClicked1] = useState(true);
     const [clicked2, setClicked2] = useState(false);
@@ -110,11 +112,11 @@ function Menu() {
     <div id="container">
         <div id="menu">
         <Tooltip text="Home">
-        <i onClick={handleClick1}
+        <Link to="/"><i onClick={handleClick1}
       style={{
         color: clicked1 ? '#ffd700' : '#64748b', // Change the color here
         cursor: 'pointer'
-      }} className="fa-solid fa-house"></i>
+      }} className="fa-solid fa-house"></i></Link>
         </Tooltip>
         <Tooltip text="Search CTRL+K">
             <i onClick={handleClick2}
