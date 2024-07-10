@@ -307,7 +307,7 @@ function Home() {
                 
             <h2>Latest Movies</h2>
                 
-            <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
+{window.innerWidth>800 <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
             <i style={{cursor:'pointer'}} onClick={handleLeft1} class="fa-solid fa-chevron-left"></i>
                 </Tooltip>
@@ -316,7 +316,7 @@ function Home() {
 
             <i style={{cursor:'pointer'}} onClick={handleRight1} class="fa-solid fa-chevron-right"></i>                </Tooltip>
 
-            </div>
+            </div>}
             <div ref={containerRef}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove} id="scroll" style={{webkitOverflowScrolling: 'touch',transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
@@ -329,7 +329,7 @@ function Home() {
 </div>
 <h2 style={{marginTop:'20px',}}>Latest TV</h2>
                 
-            <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
+{window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
             <i style={{cursor:'pointer'}} onClick={handleLeft2} class="fa-solid fa-chevron-left"></i>
                 </Tooltip>
@@ -338,7 +338,7 @@ function Home() {
 
             <i style={{cursor:'pointer'}} onClick={handleRight2} class="fa-solid fa-chevron-right"></i>                </Tooltip>
 
-            </div>
+            </div>}
             <div ref={containerRef2}
             onTouchStart={handleTouchStart2}
             onTouchMove={handleTouchMove2} id="scroll2" style={{transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
@@ -352,7 +352,7 @@ function Home() {
 
 <h2 style={{marginTop:'20px',}}>Popular Anime</h2>
                 
-            <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
+{window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
             <i style={{cursor:'pointer'}} onClick={handleLeft3} class="fa-solid fa-chevron-left"></i>
                 </Tooltip>
@@ -361,7 +361,7 @@ function Home() {
 
             <i style={{cursor:'pointer'}} onClick={handleRight3} class="fa-solid fa-chevron-right"></i>                </Tooltip>
 
-            </div>
+            </div>}
             <div ref={containerRef3}
             onTouchStart={handleTouchStart3}
             onTouchMove={handleTouchMove3} id="scroll3" style={{transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
