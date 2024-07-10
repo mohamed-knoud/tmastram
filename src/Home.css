@@ -1,15 +1,16 @@
 
 .movie{
-    height:150px;
+    height:250px;
     margin-right: 20px;
     border-radius: 10px;
-    width: 110px;
+    aspect-ratio: 3/5;
     object-fit: cover;
 }
 h2{
     position: relative;
     left:10px;
-    margin-bottom:10px;
+    color:#a4b2c8;
+    margin-bottom: 5px;
 }
 #wrapper{
     margin:20px 30px 20px 70px;
