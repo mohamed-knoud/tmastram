@@ -386,7 +386,7 @@ const handleRight4=()=>{
                 
             <h2 style={{marginTop:'20px'}}>Latest Movies</h2>
                 
-{window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
+{window.innerWidth>800 && <div style={{color:'white',textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
             <i style={{cursor:'pointer'}} onClick={handleLeft1} class="fa-solid fa-chevron-left"></i>
                 </Tooltip>
@@ -408,7 +408,7 @@ const handleRight4=()=>{
 </div>
       <h2 style={{marginTop:'20px'}}>Top Rated Movies</h2>
                 
-{window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
+{window.innerWidth>800 && <div style={{color:'white',textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
             <i style={{cursor:'pointer'}} onClick={handleLeft4} class="fa-solid fa-chevron-left"></i>
                 </Tooltip>
@@ -430,7 +430,7 @@ const handleRight4=()=>{
 </div>
 <h2 style={{marginTop:'20px'}}>Latest TV</h2>
                 
-{window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
+{window.innerWidth>800 && <div style={{color:'white',textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
             <i style={{cursor:'pointer'}} onClick={handleLeft2} class="fa-solid fa-chevron-left"></i>
                 </Tooltip>
@@ -453,7 +453,7 @@ const handleRight4=()=>{
 
 <h2 style={{marginTop:'20px',}}>Popular Anime</h2>
                 
-{window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
+{window.innerWidth>800 && <div style={{color:'white',textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
             <i style={{cursor:'pointer'}} onClick={handleLeft3} class="fa-solid fa-chevron-left"></i>
                 </Tooltip>
