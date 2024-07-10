@@ -7,10 +7,12 @@
 
 html{
     width:100%;
+    overflow:hidden;
 }
 body{
     width:100%;
     background-color: #f4f7fe;
+    overflow:hidden;
 }
 ::-webkit-scrollbar {
     width: 1px;
