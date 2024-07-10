@@ -401,7 +401,7 @@ const handleRight4=()=>{
             onTouchMove={handleTouchMove} id="scroll" style={{webkitOverflowScrolling: 'touch',transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
   {actual2 !== null && actual2.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
-      <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
+      <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt='' />
       <span style={{marginTop:'10px',color:'#777'}}>{movie.original_title.length>14?movie.original_title.substring(0,11)+"...":movie.original_title}</span>
     </div>
   ))}
@@ -423,7 +423,7 @@ const handleRight4=()=>{
             onTouchMove={handleTouchMove4} id="scroll4" style={{webkitOverflowScrolling: 'touch',transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
   {actual5 !== null && actual5.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
-      <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
+      <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt='' />
       <span style={{marginTop:'10px',color:'#777'}}>{movie.original_title.length>14?movie.original_title.substring(0,11)+"...":movie.original_title}</span>
     </div>
   ))}
@@ -445,7 +445,7 @@ const handleRight4=()=>{
             onTouchMove={handleTouchMove2} id="scroll2" style={{transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
   {actual3 !== null && actual3.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
-      <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
+      <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} alt='' />
       <span style={{marginTop:'10px',color:'#777'}}>{movie.original_name.length>14?movie.original_name.substring(0,11)+"...":movie.original_name}</span>
     </div>
   ))}
