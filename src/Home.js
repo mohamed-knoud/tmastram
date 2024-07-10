@@ -480,7 +480,7 @@ const handleRight4=()=>{
             </div>
         </div>
 
-      <div style={{padding:'20px',width:'100%',backgroundColor:'#2f2f2F',textAlign:'center',color:'#a4b2c8'}}>
+      <div style={{padding:'50px',width:'100%',backgroundColor:'#2f2f2F',textAlign:'center',color:'#a4b2c8'}}>
      تنبيه جميع الافلام والمسلسلات المتوفرة على منصتنا محملة من مواقع الانترنت لمشاهدة الافلام والمسلسلات بشكل افضل على المنصات الرسمية
 <Link style={{color:'yellow'}} to="">اضغط هنا</Link> 
 تنبيه ادارة المنصة غير مسؤولة عن محتوى الافلام
