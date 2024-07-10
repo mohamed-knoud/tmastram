@@ -364,7 +364,7 @@ const handleRight4=()=>{
                 <div style={{position:'relative',bottom:'50px',border:'10px solid #1b191a',zIndex:'999',borderRadius:'40px',backgroundColor:'#000',color:'#a4b2c8',textAlign:'center',height:'auto',paddingBottom:'15px',width:'70%'}}>
                 {actual && <span style={{fontSize:'1.1em',fontWeight:'900'}}>{actual.original_title.length>21?actual.original_title.substring(0,15)+"...":actual.original_title}</span>}
                 <div style={{position:'relative',marginTop:'10px'}}>
-                <span style={{display:'inline-block',positon:'relative',right: '20px',bottom: '10px',transform: 'rotate(-90deg)'}}>Movie</span>
+                <span style={{display:'inline-block',position:'relative',right: '20px',bottom: '10px',transform: 'rotate(-90deg)'}}>Movie</span>
                  <Tooltip text="Watch Online">
                 <span style={{fontSize:'0.7em',backgroundColor:'#ffd700',color:'#000',padding:'5px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Watch <i style={{fontSize:'0.8em',color:'#000'}} className="fa-solid fa-play"></i></span>
                 </Tooltip>
