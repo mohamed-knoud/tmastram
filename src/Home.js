@@ -376,7 +376,7 @@ const handleRight4=()=>{
 
                 </Tooltip>
                 <Tooltip text="Share">
-                <i style={{fontSize:'0.6em',,margin:'0 10px',cursor:'pointer'}} className="fa-solid fa-share"></i>
+                <i style={{fontSize:'0.6em',margin:'0 10px',cursor:'pointer'}} className="fa-solid fa-share"></i>
 
                 </Tooltip>
                 
