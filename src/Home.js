@@ -361,7 +361,7 @@ const handleRight4=()=>{
         <div id="wrapper">
             {actual && <img id="poster" src={`https://image.tmdb.org/t/p/original${actual.backdrop_path}`} alt=""/>}<div>
                 
-                <div style={{position:'relative',zIndex:'999',borderRadius:'10px',backgroundColor:'#000',color:'#a4b2c8',textAlign:'center',height:'auto',paddingBottom:'15px',width:'70%',fontSize:'0.8em'}}>
+                <div style={{position:'relative',bottom:'100px',border:'40px solid #1b191a',zIndex:'999',borderRadius:'10px',backgroundColor:'#000',color:'#a4b2c8',textAlign:'center',height:'auto',paddingBottom:'15px',width:'70%',fontSize:'0.8em'}}>
                 {actual && <span style={{fontSize:'2em',fontWeight:'900'}}>{actual.original_title.length>21?actual.original_title.substring(0,15)+"...":actual.original_title}</span>}
                 <div style={{position:'relative',marginTop:'10px'}}>
                 <span style={{display:'inline-block',transform: 'rotate(-90deg)'}}>Movie</span>
