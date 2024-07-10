@@ -384,7 +384,7 @@ const handleRight4=()=>{
 
                 </div>
                 
-            <h2>Latest Movies</h2>
+            <h2 style={{marginTop:'20px'}}>Latest Movies</h2>
                 
 {window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
@@ -406,7 +406,7 @@ const handleRight4=()=>{
     </div>
   ))}
 </div>
-      <h2>Top Rated Movies</h2>
+      <h2 style={{marginTop:'20px'}}>Top Rated Movies</h2>
                 
 {window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
@@ -428,7 +428,7 @@ const handleRight4=()=>{
     </div>
   ))}
 </div>
-<h2 style={{marginTop:'20px',}}>Latest TV</h2>
+<h2 style={{marginTop:'20px'}}>Latest TV</h2>
                 
 {window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
