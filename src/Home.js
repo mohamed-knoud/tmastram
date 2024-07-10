@@ -386,7 +386,7 @@ const handleRight4=()=>{
 
                 </div>
                 
-            <h2 style={{marginTop:'20px'}}>Latest Movies</h2>
+            <h2 style={{marginTop:'-40px'}}>Latest Movies</h2>
                 
 {window.innerWidth>800 && <div style={{color:'white',textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
