@@ -362,7 +362,7 @@ const handleRight4=()=>{
             {actual && <img id="poster" src={`https://image.tmdb.org/t/p/original${actual.backdrop_path}`} alt=""/>}<div>
                 
                 <div style={{position:'relative',bottom:'50px',border:'10px solid #1b191a',zIndex:'999',borderRadius:'60px',backgroundColor:'#000',color:'#a4b2c8',textAlign:'center',height:'auto',paddingBottom:'15px',width:'70%'}}>
-                {actual && <span style={{fontSize:'1.5em',fontWeight:'900'}}>{actual.original_title.length>21?actual.original_title.substring(0,15)+"...":actual.original_title}</span>}
+                {actual && <span style={{fontSize:'1.1em',fontWeight:'900'}}>{actual.original_title.length>21?actual.original_title.substring(0,15)+"...":actual.original_title}</span>}
                 <div style={{position:'relative',marginTop:'10px'}}>
                 <span style={{display:'inline-block',transform: 'rotate(-90deg)'}}>Movie</span>
                  <Tooltip text="Watch Online">
