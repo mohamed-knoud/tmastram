@@ -1,0 +1,62 @@
+#menu{
+    width: 50px;
+    background-color: #fff;
+    margin-left: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menu i{
+    margin:15px;
+    font-size: 0.9;
+}
+
+#container{
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    top:0;
+    align-items: center;
+}
+#poster{
+    aspect-ratio: 16/7;
+    width:100%;
+    object-fit: cover;
+    border-radius: 60px;
+}
+
+@media only screen and (max-width: 775px) {
+    /* CSS rules here */
+    #menu{
+        flex-direction: row;
+        z-index: -1;
+        justify-content: space-around;
+        margin-left: 0;
+        overflow-x: auto;
+        width: 100vw;
+        white-space: nowrap; /* Empêche le retour à la ligne des éléments fils */
+    }
+    #menu i{
+        margin:10px 10px;
+        font-size: 0.9;
+    }
+    #container{
+        height: 50px;
+        /* position: static; */
+        /* bottom:0; */
+        /* margin: 10px 0; */
+        align-items: flex-start;
+    }
+   
+}
+@media only screen and (max-width:500px) {
+    
+    #poster{
+        aspect-ratio: 3/4;
+        width:100%;
+        object-fit: cover;
+        border-radius: 60px;
+        height: 300px;
+    }
+}
