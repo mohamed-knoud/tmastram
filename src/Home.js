@@ -275,7 +275,7 @@ function Home() {
   {actual2 !== null && actual2.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
       <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
-      <span style={{marginTop:'10px',color:'#777'}}>{movie.original_title}</span>
+      <span style={{marginTop:'10px',color:'#777'}}>{movie.original_title.length>14?movie.original_title.substring(0,11)+"...":movie.original_title}</span>
     </div>
   ))}
 </div>
@@ -295,7 +295,7 @@ function Home() {
   {actual3 !== null && actual3.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
       <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
-      <span style={{marginTop:'10px',color:'#777'}}>{movie.original_name}</span>
+      <span style={{marginTop:'10px',color:'#777'}}>movie.original_title.length>14?movie.original_title.substring(0,11)+"...":movie.original_title}</span>
     </div>
   ))}
 </div>
@@ -316,7 +316,7 @@ function Home() {
   {actual4 !== null && actual4.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
       <img className='movie' src={movie.image} alt='' />
-      <span style={{marginTop:'10px',color:'#777'}}>{movie.title.english}</span>
+      <span style={{marginTop:'10px',color:'#777'}}>{movie.title.english.length>14?movie.title.english.substring(0,14):movie.title.english}</span>
     </div>
   ))}
 </div>
