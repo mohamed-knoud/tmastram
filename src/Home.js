@@ -307,7 +307,7 @@ function Home() {
                 
             <h2>Latest Movies</h2>
                 
-{window.innerWidth>800 <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
+{window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
               <Tooltip text="Swipe Left">
             <i style={{cursor:'pointer'}} onClick={handleLeft1} class="fa-solid fa-chevron-left"></i>
                 </Tooltip>
