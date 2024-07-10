@@ -5,7 +5,58 @@ import './Home.css'
 function Home() {
     const [actual,setActual] = useState(null)
     const [actual2,setActual2] = useState(null)
+        const [actual5,setActual5] = useState(null)
 
+const handleRight4=()=>{
+      if(window.innerWidth>775){
+        document
+          .querySelector('#scroll4')
+          .scrollBy({
+            left: 700,
+            behavior: 'smooth'  // This enables smooth scrolling
+          });
+        }else if(window.innerWidth>500){
+          document
+          .querySelector('#scroll4')
+          .scrollBy({
+            left: 400,
+            behavior: 'smooth'  // This enables smooth scrolling
+          });
+        }else{
+          document
+          .querySelector('#scroll4')
+          .scrollBy({
+            left: 200,
+            behavior: 'smooth'  // This enables smooth scrolling
+          });
+        }
+      
+    }
+    const handleLeft4=()=>{
+      if(window.innerWidth>775){
+        document
+          .querySelector('#scroll4')
+          .scrollBy({
+            left: -700,
+            behavior: 'smooth'  // This enables smooth scrolling
+          });
+        }else if(window.innerWidth>500){
+          document
+          .querySelector('#scroll4')
+          .scrollBy({
+            left: -500,
+            behavior: 'smooth'  // This enables smooth scrolling
+          });
+        }else{
+          document
+          .querySelector('#scroll4')
+          .scrollBy({
+            left: -200,
+            behavior: 'smooth'  // This enables smooth scrolling
+          });
+        }
+      
+    }
     const [actual3,setActual3] = useState(null)
     const [actual4,setActual4] = useState(null)
 
@@ -13,6 +64,8 @@ function Home() {
     let response2
     let response3
     let response4
+    let response5
+
     const handleRight1=()=>{
       if(window.innerWidth>775){
         document
@@ -205,12 +258,22 @@ function Home() {
           console.error('Error fetching data:', error);
         }
       };
+    const fetchData5 = async () => {
+        try {
+          response5 = await axios.get('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1',options);
+          setActual5(response5.data.results)
+          console.log(response5.data.results)
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
       let i = 0
     useEffect(() => {
       fetchData1();
       fetchData2();
       fetchData3();
       fetchData4();
+      fetchData5();
 
       const interval = setInterval(() => {
         if(i===20){
@@ -221,6 +284,7 @@ function Home() {
             setActual2(response2.data.results)
             setActual3(response3.data.results)
             // setActual4(response4.data.results)
+            setActual5(response5.data.results)
 
             i++
         }
@@ -232,6 +296,7 @@ function Home() {
     const containerRef = useRef(null);
     const containerRef2 = useRef(null);
     const containerRef3 = useRef(null);
+    const containerRef4 = useRef(null);
 
     let startX = null;
     let scrollLeft = null;
@@ -274,6 +339,20 @@ function Home() {
         
         const xDiff3 = startX3 - event.touches[0].clientX;
         containerRef3.current.scrollLeft = scrollLeft3 + xDiff3;
+    };
+    let startX4 = null;
+    let scrollLeft4 = null;
+
+    const handleTouchStart4 = (event) => {
+        startX4 = event.touches[0].clientX;
+        scrollLeft4 = containerRef4.current.scrollLeft;
+    };
+
+    const handleTouchMove4 = (event) => {
+        if (!startX4) return;
+        
+        const xDiff4 = startX4 - event.touches[0].clientX;
+        containerRef4.current.scrollLeft = scrollLeft4 + xDiff4;
     };
   return (
     <div>
@@ -321,6 +400,28 @@ function Home() {
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove} id="scroll" style={{webkitOverflowScrolling: 'touch',transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
   {actual2 !== null && actual2.map(movie => (
+    <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
+      <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
+      <span style={{marginTop:'10px',color:'#777'}}>{movie.original_title.length>14?movie.original_title.substring(0,11)+"...":movie.original_title}</span>
+    </div>
+  ))}
+</div>
+      <h2>Top Rated Movies</h2>
+                
+{window.innerWidth>800 && <div style={{textAlign:'right',position:'relative',bottom:'20px',right:'50px'}}>
+              <Tooltip text="Swipe Left">
+            <i style={{cursor:'pointer'}} onClick={handleLeft4} class="fa-solid fa-chevron-left"></i>
+                </Tooltip>
+                Swipe
+                <Tooltip text="Swipe Right">
+
+            <i style={{cursor:'pointer'}} onClick={handleRight4} class="fa-solid fa-chevron-right"></i>                </Tooltip>
+
+            </div>}
+            <div ref={containerRef4}
+            onTouchStart={handleTouchStart4}
+            onTouchMove={handleTouchMove4} id="scroll4" style={{webkitOverflowScrolling: 'touch',transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
+  {actual5 !== null && actual5.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
       <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
       <span style={{marginTop:'10px',color:'#777'}}>{movie.original_title.length>14?movie.original_title.substring(0,11)+"...":movie.original_title}</span>
