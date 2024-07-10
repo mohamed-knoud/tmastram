@@ -372,7 +372,7 @@ const handleRight4=()=>{
                 <Link style={{textDecoration:'none'}} to={`detail/`}><span style={{fontSize:'0.6em',backgroundColor:'#ffd700',color:'#000',padding:'5px',marginRight:'5px',borderRadius:'5px',cursor:'pointer'}}>Detail</span></Link>
                 </Tooltip>
                 <Tooltip text="Add to Watchlist">
-                <i style={{fontSize:'0.6em',,margin:'0 10px',cursor:'pointer'}} className="fa-solid fa-plus"></i>
+                <i style={{fontSize:'0.6em',margin:'0 10px',cursor:'pointer'}} className="fa-solid fa-plus"></i>
 
                 </Tooltip>
                 <Tooltip text="Share">
