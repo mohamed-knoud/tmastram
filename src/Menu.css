@@ -47,6 +47,8 @@
         bottom:0;
         /* margin: 10px 0; */
         align-items: flex-end;
+
+        top:100%;
     }
    
 }
