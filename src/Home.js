@@ -229,6 +229,52 @@ function Home() {
       // Clean up the interval on component unmount
       return () => clearInterval(interval);
     }, []); 
+    const containerRef = useRef(null);
+    const containerRef2 = useRef(null);
+    const containerRef3 = useRef(null);
+
+    let startX = null;
+    let scrollLeft = null;
+
+    const handleTouchStart = (event) => {
+        startX = event.touches[0].clientX;
+        scrollLeft = containerRef.current.scrollLeft;
+    };
+
+    const handleTouchMove = (event) => {
+        if (!startX) return;
+        
+        const xDiff = startX - event.touches[0].clientX;
+        containerRef.current.scrollLeft = scrollLeft + xDiff;
+    };
+    let startX2 = null;
+    let scrollLeft2 = null;
+
+    const handleTouchStart2 = (event) => {
+        startX2 = event.touches[0].clientX;
+        scrollLeft2 = containerRef2.current.scrollLeft;
+    };
+
+    const handleTouchMove2 = (event) => {
+        if (!startX2) return;
+        
+        const xDiff2 = startX2 - event.touches[0].clientX;
+        containerRef2.current.scrollLeft = scrollLeft2 + xDiff2;
+    };
+    let startX3 = null;
+    let scrollLeft3 = null;
+
+    const handleTouchStart3 = (event) => {
+        startX3 = event.touches[0].clientX;
+        scrollLeft3 = containerRef3.current.scrollLeft;
+    };
+
+    const handleTouchMove3 = (event) => {
+        if (!startX3) return;
+        
+        const xDiff3 = startX3 - event.touches[0].clientX;
+        containerRef3.current.scrollLeft = scrollLeft3 + xDiff3;
+    };
   return (
     <div>
         <div id="wrapper">
@@ -271,7 +317,9 @@ function Home() {
             <i style={{cursor:'pointer'}} onClick={handleRight1} class="fa-solid fa-chevron-right"></i>                </Tooltip>
 
             </div>
-            <div id="scroll" style={{webkitOverflowScrolling: 'touch',transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
+            <div ref={containerRef}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove} id="scroll" style={{webkitOverflowScrolling: 'touch',transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
   {actual2 !== null && actual2.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
       <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
@@ -291,7 +339,9 @@ function Home() {
             <i style={{cursor:'pointer'}} onClick={handleRight2} class="fa-solid fa-chevron-right"></i>                </Tooltip>
 
             </div>
-            <div id="scroll2" style={{transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
+            <div ref={containerRef2}
+            onTouchStart={handleTouchStart2}
+            onTouchMove={handleTouchMove2} id="scroll2" style={{transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
   {actual3 !== null && actual3.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
       <img className='movie' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} alt='' />
@@ -312,7 +362,9 @@ function Home() {
             <i style={{cursor:'pointer'}} onClick={handleRight3} class="fa-solid fa-chevron-right"></i>                </Tooltip>
 
             </div>
-            <div id="scroll3" style={{transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
+            <div ref={containerRef3}
+            onTouchStart={handleTouchStart3}
+            onTouchMove={handleTouchMove3} id="scroll3" style={{transition:'all 0.3s ease', display: 'flex',overflowX: 'hidden',whiteSpace: 'nowrap'}}>
   {actual4 !== null && actual4.map(movie => (
     <div style={{display:'flex',flexDirection:'column',marginLeft:'10px'}}  key={movie.id}> {/* Remember to add a unique key prop when iterating over lists */}
       <img className='movie' src={movie.image} alt='' />
