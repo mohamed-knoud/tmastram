@@ -281,7 +281,7 @@ function Home() {
             {actual && <img id="poster" src={`https://image.tmdb.org/t/p/original${actual.backdrop_path}`} alt=""/>}<div>
                 
                 <div style={{position:'relative',bottom:'50px',zIndex:'999',borderRadius:'10px',backgroundColor:'white',textAlign:'center',height:'auto',paddingBottom:'15px'}}>
-                {actual && <span style={{fontSize:'2em',fontWeight:'900'}}>{actual.original_title}</span>}
+                {actual && <span style={{fontSize:'2em',fontWeight:'900'}}>{actual.original_title.length>21?actual.original_title.substring(0,18)+"...":actual.original_title}</span>}
                 <div style={{position:'relative',marginTop:'10px'}}>
                 <span style={{display:'inline-block',transform: 'rotate(-90deg)'}}>Movie</span>
                 <Tooltip text="Watch Online">
